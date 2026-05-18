@@ -100,7 +100,6 @@ const EyeAnimation = () => {
         setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
     };
 
-    //FIXME:
     const handleSubmit = async (e) => {
         e.preventDefault();
         setResponse("Pensando...");

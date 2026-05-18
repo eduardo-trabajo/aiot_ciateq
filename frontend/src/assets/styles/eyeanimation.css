@@ -1,0 +1,188 @@
+/* EyeAnimation.css */
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eye-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: black;
+  z-index: -1;
+}
+
+.eye-form {
+  position: fixed;
+  bottom: 60px;
+  /* antes: 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: none;
+  /* sin fondo */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eye-input {
+  width: 320px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #121212;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.eye-input::placeholder {
+  color: #888;
+}
+
+.eye-button {
+  padding: 10px 3px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00000000;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.eye-button:hover {
+  background-color: #00000000;
+}
+
+.eye-response {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+  z-index: 10;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.icon-bar-single {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+}
+
+.icon-chart {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+  /* blanco */
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+}
+
+.icon-chart:hover {
+  transform: scale(1.2);
+  filter: none;
+}
+
+
+.voiceButton {
+  display: none;
+
+}
+
+
+
+@media (max-width: 600px) {
+  .eye-form {
+    width: 100%;
+    gap: 0;
+    margin-left: 8%;
+  }
+
+  .eye-input {
+    width: 80%;
+
+    font-size: 14px;
+    position: absolute;
+    top: -90px;
+    height: 35px;
+  }
+
+  .eye-button {
+    width: 8%;
+    font-size: 14px;
+    margin-left: 10%;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .eye-response {
+    bottom: 160px;
+    /* sube la respuesta también */
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .icon-bar {
+    bottom: 200px;
+    /* sube los iconos */
+    font-size: 28px;
+    gap: 16px;
+  }
+
+  .voiceButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(78, 42, 117, 1) 0%, rgba(230, 81, 94, 1) 100%);
+    color: white;
+    border: solid black;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .gradient-animated {
+    background: linear-gradient(90deg, rgba(78, 42, 117, 1), rgba(230, 81, 94, 1));
+    background-size: 200% 200%;
+    animation: gradientMove 6s ease infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+}

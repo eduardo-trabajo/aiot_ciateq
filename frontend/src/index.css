@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --blue:#11162F;
+  --purple:#723C80;
+}
+
+*{
+  margin: 0;
+}
+
+.background{
+    background: black;    
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a.active{
+  color: var(--purple);
+}

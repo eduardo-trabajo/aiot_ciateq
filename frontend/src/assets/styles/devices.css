@@ -1,0 +1,168 @@
+.devicesContainer {
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.devicesContainer h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: black;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td {
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  background: linear-gradient(176deg, rgba(78, 42, 117, 1) 12%, rgba(230, 81, 94, 1) 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+
+.pagination button:hover {
+  background: black;
+  padding: 12px 22px;
+}
+
+/* Botón Excel */
+.downloadContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.excelIcon:hover {
+  opacity: 0.7;
+}
+
+/* Filtros */
+.filterContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filterContainer label {
+  font-size: 15px;
+}
+
+.filterContainer label input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .devicesContainer {
+    padding: 10px;
+    margin-top: 30%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .filterContainer,
+  .downloadContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filterContainer label input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .excelIcon{
+    display: none;
+  }
+
+  .pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .downloadContainer {
+    justify-content: center;
+  }
+
+  .devicesContainer h2 {
+    font-size: 24px;
+  }
+}

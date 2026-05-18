@@ -1,0 +1,38 @@
+.layoutContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 800px;
+    background-color: white;
+    height: 100vh;
+}
+
+.contentContainer{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(0, 0, 255, 0);
+    padding: 20px;
+    height: 700px;
+    width: 90%;
+}
+
+
+@media (max-width: 768px) {
+    .layoutContainer {
+        grid-template-columns: 100%;
+        grid-template-rows: 500px;
+    }
+
+    
+
+   
+
+    .contentContainer{
+    grid-column: 1;
+    grid-row: 1 ;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    height: 1400px;
+    width: 100%;
+}
+}

@@ -1,0 +1,35 @@
+.dashboardContainer {
+    background: white!important;
+    display: flex;
+    flex-wrap: wrap;
+    height: 85vh;
+    background-color: #ff000000;
+    gap: 20px; 
+}
+
+.chartContainer {
+    width: 42%;
+    height: 32%;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 15px;
+    margin-left: 1%;
+    padding: 1%;
+}
+
+@media (max-width: 768px) {
+
+    .dashboardContainer{
+        margin-left: 5%;
+        margin-top: 35%;
+        gap: 15px; 
+    }
+
+    .chartContainer {
+    width: 90%;
+    height: auto;
+    background-color: rgba(29, 198, 198, 0);
+    border-radius: 15px;
+    margin-left: 0%;
+    padding: 0%;
+}
+}

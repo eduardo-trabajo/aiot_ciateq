@@ -1,0 +1,197 @@
+.sideBarContainer {
+    width: 50%;
+    margin-left: 30%;
+    height: 700px;
+    margin-top: 10%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* opcional: para apilar hijos verticalmente */
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+}
+
+
+
+
+.sideBarContainer ul {
+    list-style: none;
+    margin-top: 15%;
+    color: white;
+    text-align: center;
+    width: 60%;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 10%;
+    height: 300px;
+    display: block;
+    
+}
+
+.sideBarContainer ul li {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 25px; 
+    margin-bottom: 15px; 
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 22px;
+    transition: .5s;
+
+}
+
+.sideBarContainer ul li img{
+    width: 27px;
+    height: 27px;
+    transition: .5s;
+    margin-right: 25px;
+    filter: brightness(0) invert(1); /* hace blanco casi todo */
+}
+
+.sideBarContainer ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Mantiene el color actual */
+  }
+  .sideBarContainer ul li a.active {
+    color: var(--purple);
+  }
+
+.sideBarContainer ul li img:hover{
+    width: 32px;
+    height: 32px;
+    transition: .5s;
+    filter: none; /* hace blanco casi todo */
+}
+.sideBarContainer ul li:hover {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.bottom{
+    height: 100px !important;
+    margin-top: 100px!important;
+}
+
+.logoContainer{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logoContainer img {
+    width: 80%;
+    height: 80%;
+    margin-top: 8%; 
+    animation: spin 30s linear infinite; /* duración: 4s, bucle infinito */
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+.sideBarContainer {
+    width: 100%;
+    margin-left: 0%;
+    height: 105px;
+    margin-top: 0%;
+    border-radius: 0px;
+    position : absolute;
+}
+
+
+
+.sideBarContainer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center;
+    gap: 5px; /* Espaciado entre íconos */
+    width: 80%;
+    margin-left: -3%;
+    height: auto;
+    background-color: rgba(0, 255, 255, 0); /* transparente */
+}
+
+/* Opcional: los ítems también necesitan comportarse bien */
+.sideBarContainer ul li {
+    display: inline-block;
+    color: white;
+    font-size: 24px; /* Tamaño de los íconos */
+}
+
+
+.sideBarContainer ul li img{
+    width: 27px;
+    height: 27px;
+    transition: .5s;
+    margin-right: 25px;
+    filter: brightness(0) invert(1); /* hace blanco casi todo */
+}
+
+.sideBarContainer ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Mantiene el color actual */
+  }
+  .sideBarContainer ul li a.active {
+    color: var(--purple);
+  }
+
+.sideBarContainer ul li img:hover{
+    width: 32px;
+    height: 32px;
+    transition: .5s;
+    filter: none; /* hace blanco casi todo */
+}
+.sideBarContainer ul li:hover {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.bottom{
+    height: 100px !important;
+    margin-top: 100px!important;
+}
+
+.logoContainer{
+    width: 85px;
+    height: 85px;
+    margin-top: 20%;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+}

@@ -13,7 +13,7 @@ Open-source AIoT platform for continuous measurement, storage, visualization, an
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         EDGE DEVICE                             │
-│   ESP32 + BME688 sensor  →  MQTT publish every 15 min          │
+│   ESP32 + SHT85 sensor  →  MQTT publish every 15 min          │
 │   Measures: Temperature · Humidity · Pressure · IAQ             │
 └────────────────────────┬────────────────────────────────────────┘
                          │ HTTP POST / MQTT
@@ -70,7 +70,7 @@ aiot_ciateq/
 
 ## Hardware — Edge Device
 
-The edge device is a custom PCB carrier board for the **Raspberry Pi CM5** with a **BME688** environmental sensor. It reads temperature, humidity, barometric pressure, and IAQ (Indoor Air Quality) index, then publishes the data to the backend over HTTP/MQTT.
+The edge device is a custom PCB carrier board for the **Raspberry Pi CM5** with a **SHT85** environmental sensor. It reads temperature, humidity, barometric pressure, and IAQ (Indoor Air Quality) index, then publishes the data to the backend over HTTP/MQTT.
 
 ### PCB
 
@@ -204,7 +204,7 @@ If `customPrompt` is omitted, the backend builds an automatic analysis prompt fr
 | AI providers | OpenAI GPT-4o · DeepSeek-chat · Mistral-medium |
 | Alert channels | Twilio (WhatsApp) · Telegram Bot API · Nodemailer (SMTP) |
 | Frontend | React 19 · Vite · Chart.js · react-router-dom v7 |
-| Hardware | Raspberry Pi CM5 · BME688 · Custom PCB |
+| Hardware | Raspberry Pi CM5 · SHT85 · Custom PCB |
 
 ---
 

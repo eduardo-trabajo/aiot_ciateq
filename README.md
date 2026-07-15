@@ -83,7 +83,7 @@ The edge device is a custom PCB carrier board for the **Raspberry Pi CM5** with 
 | Component | Description |
 |---|---|
 | Raspberry Pi CM5 | Compute Module 5 — edge processing |
-| BME688 | Temperature / Humidity / Pressure / IAQ sensor |
+| SHT85| Temperature / Humidity / Pressure / IAQ sensor |
 | Custom carrier PCB | See `hardware/gerbers/` |
 
 ### Manufacturing

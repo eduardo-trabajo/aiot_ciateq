@@ -1,0 +1,14 @@
+[Unit]
+Description=Blackorbs v2 - API (Express + Socket.IO)
+After=network.target
+
+[Service]
+Type=simple
+User=blackorbs
+WorkingDirectory=/home/blackorbs/blackorbs-v2/api
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

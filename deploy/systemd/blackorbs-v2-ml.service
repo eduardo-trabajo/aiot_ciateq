@@ -1,0 +1,15 @@
+[Unit]
+Description=Blackorbs v2 - ML service (anomaly + forecast)
+After=network.target blackorbs-v2-api.service
+Wants=blackorbs-v2-api.service
+
+[Service]
+Type=simple
+User=blackorbs
+WorkingDirectory=/home/blackorbs/blackorbs-v2/ml
+ExecStart=/home/blackorbs/blackorbs-v2/ml/bin/python service.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

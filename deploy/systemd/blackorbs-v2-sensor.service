@@ -1,0 +1,15 @@
+[Unit]
+Description=Blackorbs v2 - Sensor SHT85 read loop
+After=network.target blackorbs-v2-api.service
+Wants=blackorbs-v2-api.service
+
+[Service]
+Type=simple
+User=blackorbs
+WorkingDirectory=/home/blackorbs/blackorbs-v2/sensor
+ExecStart=/home/blackorbs/blackorbs-v2/sensor/bin/python read_loop.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

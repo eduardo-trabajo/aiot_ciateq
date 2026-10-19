@@ -1,0 +1,15 @@
+[Unit]
+Description=Blackorbs v2 - Pantalla OLED (aro etéreo)
+After=network.target blackorbs-v2-api.service
+Wants=blackorbs-v2-api.service
+
+[Service]
+Type=simple
+User=blackorbs
+WorkingDirectory=/home/blackorbs/blackorbs-v2/display
+ExecStart=/home/blackorbs/blackorbs-v2/display/bin/python ring_display.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
